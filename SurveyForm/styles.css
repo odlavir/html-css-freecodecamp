@@ -1,65 +1,83 @@
-body {
-    font-family: Tahoma;
-    font-size: 20px;
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    font-size: 18px;
+* {
+    padding:0;
+    margin:0;
+    vertical-align:baseline;
+    list-style:none;
+    border:0
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
     color: #ffffff;
-    background-color: rgb(100, 99, 177);
+    background-image: linear-gradient(
+        115deg,
+        rgba(58, 58, 158, 0.8),
+        rgba(136, 136, 206, 0.7)
+      ),
+      url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg)
+}
+
+body {
+    text-align: center;
+    min-width: 29.8rem;
+    max-width: 45rem;
+    margin: 0 auto;
+}
+
+header {
+    height: 20%;
+    align-content: center;
 }
 
 main {
-    margin: 0 auto;
-    width: 80vw;
-    min-width: 477px;
-    max-width: 720px;
-    background-color: rgba(41, 41, 71, 50);
+    height: 80%;
+    background-color: rgba(41, 41, 71, 90%);
 }
 
-h1, p {
-    margin: 1em auto;
-    text-align: center;
+.itens-group {
+    text-align: left;
+    margin: 1.25rem;
 }
 
-fieldset {
-    padding: 0px 45px 40px 45px;
-    border: none;
-}
-
-fieldset:first-of-type {
-    padding-top: 45px;
+label {
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
 }
 
 input, select, textarea {
     width: 100%;
-}
-
-label {
-    display: block;
-    margin: 0.5rem 0;
-}
-
-input[type="submit"] {
-    display: block;
-    width: 100%;
-    height: 45px;
-    font-size: 1.1rem;
-    color: #ffffff;
-    background-color: rgb(55, 175, 101);
-}
-
-input, select {
-    border-radius: 7px;
     height: 35px;
 }
 
-input[type="checkbox"], input[type="radio"] {
-    height: 20px;
+#first-itens-group {
+    padding-top: 2.81rem;
 }
 
-.inline {
-    width: unset;
-    margin: 0 .5em 0 0;
-    vertical-align: middle;
+#last-itens-group {
+    padding-bottom: 3rem;
 }
+
+.itens-group p {
+    text-align: left;
+}
+
+#submit {
+    background-color: rgb(55, 175, 101);
+    height: 2.81rem;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: 2%;
+}
+
+/* label, p {
+    padding: 10px 0;
+}
+
+input, select, label {
+    height: 35px;
+} */

@@ -16,59 +16,130 @@
 
     <main>
         <form action="" method="post" id="survey-form">
-            <fieldset class="user-information">
-                <label for="name-label">Name<input type="text" id="name" placeholder="Enter your Name"></label>
-                <label for="email-label">Email<input type="email" id="email" placeholder="Enter your Email"></label>
-                <label for="number-label">Age (optional)<input type="number" id="age" placeholder="Age" min="13"
-                        max="120"></label>
+            <div class="itens-group" id="first-itens-group">
+                <label id="name-label" for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your Name" required>
+            </div>
+            <div class="itens-group">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+            </div>
+            <div class="itens-group">
+                <label name="age-label" for="number">Age (optional)</label>
+                <input type="number" id="number" name="age" placeholder="Age" min="13" max="120" required>
+            </div>
 
-                <label for="">Which option best describes your current role?</label>
-                <select id="dropdown-current-role">
-                    <option value="">Select current role</option>
+            <div class="itens-group">
+                <p>Which option best describes your current role?</p>
+                <select id="dropdown-current-role" name="role" required>
+                    <option disabled selected value="">Select current role</option>
                     <option value="1">Student</option>
                     <option value="2">Full Time Job</option>
                     <option value="3">Full Time Learner</option>
                     <option value="4">Prefer not to say</option>
                     <option value="5">Other</option>
                 </select>
+            </div>
 
-                <label>Would you recommend freeCodeCamp to a friend?</label>
-                <label for="rd-definitely"><input type="radio" id="rd-definitely" class="inline"> Definitely</label>
-                <label for="rd-maybe"><input type="radio" id="rd-maybe" class="inline"> Maybe</label>
-                <label for="rd-not-sure"><input type="radio" id="rd-not-sure" class="inline"> Not sure</label>
-            </fieldset>
+            <div class="itens-group">
+                <p>Would you recommend freeCodeCamp to a friend?</p>
+                <label>
+                    <input type="radio" name="user-recomend" id="rd-definitely" value="definitely" checked>
+                    Definitely
+                    <br>
+                </label>
+                <label>
+                    <input type="radio" name="user-recomend" id="rd-maybe" value="maybe">
+                    Maybe
+                    <br>
+                </label>
+                <label>
+                    <input type="radio" name="user-recomend" id="rd-not-sure" value="not-sure">
+                    Not sure
+                    <br>
+                </label>
+            </div>
 
-            <fieldset class="professional-prefer">
-                <label for="">What is your favorite feature of freeCodeCamp?</label>
-                <select id="dropdown-feature">
-                    <option value="">Select an option</option>
+            <div class="itens-group">
+                <p>What is your favorite feature of freeCodeCamp?</p>
+                <select id="dropdown-feature" name="dropdown-feature" required>
+                    <option disabled selected value="">Select an option</option>
                     <option value="1">Challenges</option>
                     <option value="2">Projects</option>
                     <option value="3">Community</option>
                     <option value="4">Open Source</option>
                 </select>
+            </div>
 
-                <label for="">What would you like to see improved? (Check all that apply)</label>
-                <input type="checkbox" id="front-end-project" value="1" class="inline">Front-end Projects
-                <input type="checkbox" id="back-end-project" value="2" class="inline">Back-end Projects
-                <input type="checkbox" id="data-visualization" value="3" class="inline">Data Visualization
-                <input type="checkbox" id="Challenges" value="4" class="inline">Challenges
-                <input type="checkbox" id="open-source-community" value="5" class="inline">Open Source Community
-                <input type="checkbox" id="gitter-help-rooms" value="6" class="inline">Gitter help rooms
-                <input type="checkbox" id="videos" value="7" class="inline">Videos
-                <input type="checkbox" id="city-meetups" value="8" class="inline">City Meetups
-                <input type="checkbox" id="wiki" value="9" class="inline">Wiki
-                <input type="checkbox" id="forum" value="10" class="inline">Forum
-                <input type="checkbox" id="aditional-courses" value="11" class="inline">Adicional Courses
-            </fieldset>
+            <div class="itens-group">
+                <p>What would you like to see improved?
+                    <span class="check-all">(Check all that apply)</span>
+                </p>
+                <label for="">
+                    <input type="checkbox" name="prefer" id="front-end-project" value="1">
+                    Front-end Projects
+                    <br>
+                </label>
+                <label for="">
+                    <input type="checkbox" name="prefer" id="back-end-project" value="2">
+                    Back-end Projects
+                    <br>
+                </label>
+                <label for="">
+                    <input type="checkbox" name="prefer" id="data-visualization" value="3">
+                    Data Visualization
+                    <br>
+                </label>
+                <label for="">
+                    <input type="checkbox" name="prefer" id="Challenges" value="4">
+                    Challenges
+                    <br>
+                </label>
+                <label for="">
+                    <input type="checkbox" name="prefer" id="open-source-community" value="5">
+                    Open Source Community
+                    <br>
+                </label>
+                <label for="">
+                    <input type="checkbox" name="prefer" id="gitter-help-rooms" value="6">
+                    Gitter help rooms
+                    <br>
+                </label>
+                <label for="">
+                    <input type="checkbox" name="prefer" id="videos" value="7">
+                    Videos
+                    <br>
+                </label>
+                <label for="">
+                    <input type="checkbox" name="prefer" id="city-meetups" value="8">
+                    City Meetups
+                    <br>
+                </label>
+                <label for="">
+                    <input type="checkbox" name="prefer" id="wiki" value="9">
+                    Wiki
+                    <br>
+                </label>
+                <label for="">
+                    <input type="checkbox" name="prefer" id="forum" value="10">
+                    Forum
+                    <br>
+                </label>
+                <label for="">
+                    <input type="checkbox" name="prefer" id="aditional-courses" value="11">
+                    Adicional Courses
+                    <br>
+                </label>
+            </div>
 
-            <fieldset class="suggestions">
-                <label for="suggestions">Any comments or suggestions?</label>
+            <div class="itens-group">
+                <p>Any comments or suggestions?</p>
                 <textarea id="suggestions" placeholder="Enter your comment here..."></textarea>
+            </div>
 
+            <div class="itens-group" id="last-itens-group">
                 <input type="submit" id="submit" value="Submit">
-            </fieldset>
-
+            </div>
         </form>
     </main>
 </body>
