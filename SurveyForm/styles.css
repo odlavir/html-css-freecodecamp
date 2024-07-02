@@ -1,83 +1,90 @@
-* {
-    padding:0;
-    margin:0;
-    vertical-align:baseline;
-    list-style:none;
-    border:0
-}
-
-html {
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Poppins', sans-serif;
     font-size: 1.25rem;
     font-weight: 400;
     color: #ffffff;
-    background-image: linear-gradient(
-        115deg,
-        rgba(58, 58, 158, 0.8),
-        rgba(136, 136, 206, 0.7)
-      ),
-      url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg)
+    background-image: linear-gradient(115deg,
+            rgba(58, 58, 158, 0.8),
+            rgba(136, 136, 206, 0.7)),
+        url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+
 }
 
-body {
-    text-align: center;
-    min-width: 29.8rem;
-    max-width: 45rem;
-    margin: 0 auto;
+header,
+main {
+    min-width: 23.438rem;
+    max-width: 41.688rem;
 }
 
 header {
-    height: 20%;
+    height: 15vh;
+    text-align: center;
     align-content: center;
+    row-gap: 20px;
 }
 
 main {
-    height: 80%;
-    background-color: rgba(41, 41, 71, 90%);
+    padding: 2.5rem;
+    background-color: #262646;
+    opacity: 0.9;
+    border-radius: 0.5rem;
 }
 
-.itens-group {
-    text-align: left;
-    margin: 1.25rem;
+.title {
+    font-size: 2rem;
+    padding-bottom: 0.625rem;
 }
 
-label {
-    display: flex;
-    align-items: center;
-    font-size: 1.125rem;
+.description {
+    font-style: italic;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    border-radius: 0.313rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    height: 2.375rem;
+}
+
+input,
+p {
     margin-bottom: 0.5rem;
 }
 
-input, select, textarea {
+.itens-group {
+    margin-bottom: 1.875rem;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.label-radio,
+.label-checkbox {
+    display: flex;
+    font-size: 1.20rem;
+    align-items: center;
+    padding: 0.188rem 0;
+}
+
+input[type='submit'] {
     width: 100%;
-    height: 35px;
+    padding: 0.938rem;
+    background-color: #37af65;
+    color: #ffffff;
+    font-weight: bold;
 }
-
-#first-itens-group {
-    padding-top: 2.81rem;
-}
-
-#last-itens-group {
-    padding-bottom: 3rem;
-}
-
-.itens-group p {
-    text-align: left;
-}
-
-#submit {
-    background-color: rgb(55, 175, 101);
-    height: 2.81rem;
-}
-
-input[type="radio"], input[type="checkbox"] {
-    width: 2%;
-}
-
-/* label, p {
-    padding: 10px 0;
-}
-
-input, select, label {
-    height: 35px;
-} */

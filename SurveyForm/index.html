@@ -1,147 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
     <title>Survey Form</title>
 </head>
 
 <body>
-    <header>
-        <h1 id="title">Survey Form</h1>
-        <p id="description">Thank you for taking the time to help us improve the platform</p>
-    </header>
+    <div class="container">
+        <header>
+            <h1 id="title" class="title">Survey Form</h1>
+            <p id="description" class="description">Thank you for taking the time to help us improve the platform</p>
+        </header>
 
-    <main>
-        <form action="" method="post" id="survey-form">
-            <div class="itens-group" id="first-itens-group">
-                <label id="name-label" for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your Name" required>
-            </div>
-            <div class="itens-group">
-                <label id="email-label" for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your Email" required>
-            </div>
-            <div class="itens-group">
-                <label name="age-label" for="number">Age (optional)</label>
-                <input type="number" id="number" name="age" placeholder="Age" min="13" max="120" required>
-            </div>
+        <main>
+            <form action="" method="post" id="survey-form">
+                <div class="itens-group" id="first-itens-group">
+                    <label id="name-label" for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your Name" required>
+                </div>
+                <div class="itens-group">
+                    <label id="email-label" for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+                </div>
+                <div class="itens-group">
+                    <label name="age-label" for="number">Age (optional)</label>
+                    <input type="number" id="number" name="age" placeholder="Age" min="13" max="120" required>
+                </div>
 
-            <div class="itens-group">
-                <p>Which option best describes your current role?</p>
-                <select id="dropdown-current-role" name="role" required>
-                    <option disabled selected value="">Select current role</option>
-                    <option value="1">Student</option>
-                    <option value="2">Full Time Job</option>
-                    <option value="3">Full Time Learner</option>
-                    <option value="4">Prefer not to say</option>
-                    <option value="5">Other</option>
-                </select>
-            </div>
+                <div class="itens-group">
+                    <p>Which option best describes your current role?</p>
+                    <select id="dropdown-current-role" name="role" required>
+                        <option disabled selected value="">Select current role</option>
+                        <option value="1">Student</option>
+                        <option value="2">Full Time Job</option>
+                        <option value="3">Full Time Learner</option>
+                        <option value="4">Prefer not to say</option>
+                        <option value="5">Other</option>
+                    </select>
+                </div>
 
-            <div class="itens-group">
-                <p>Would you recommend freeCodeCamp to a friend?</p>
-                <label>
-                    <input type="radio" name="user-recomend" id="rd-definitely" value="definitely" checked>
-                    Definitely
-                    <br>
-                </label>
-                <label>
-                    <input type="radio" name="user-recomend" id="rd-maybe" value="maybe">
-                    Maybe
-                    <br>
-                </label>
-                <label>
-                    <input type="radio" name="user-recomend" id="rd-not-sure" value="not-sure">
-                    Not sure
-                    <br>
-                </label>
-            </div>
+                <div class="itens-group">
+                    <p>Would you recommend freeCodeCamp to a friend?</p>
+                    <label class="label-radio">
+                        <input type="radio" name="user-recomend" id="rd-definitely" value="definitely" checked>
+                        Definitely
+                        <br>
+                    </label>
+                    <label class="label-radio">
+                        <input type="radio" name="user-recomend" id="rd-maybe" value="maybe">
+                        Maybe
+                        <br>
+                    </label>
+                    <label class="label-radio">
+                        <input type="radio" name="user-recomend" id="rd-not-sure" value="not-sure">
+                        Not sure
+                        <br>
+                    </label>
+                </div>
 
-            <div class="itens-group">
-                <p>What is your favorite feature of freeCodeCamp?</p>
-                <select id="dropdown-feature" name="dropdown-feature" required>
-                    <option disabled selected value="">Select an option</option>
-                    <option value="1">Challenges</option>
-                    <option value="2">Projects</option>
-                    <option value="3">Community</option>
-                    <option value="4">Open Source</option>
-                </select>
-            </div>
+                <div class="itens-group">
+                    <p>What is your favorite feature of freeCodeCamp?</p>
+                    <select id="dropdown-feature" name="dropdown-feature" required>
+                        <option disabled selected value="">Select an option</option>
+                        <option value="1">Challenges</option>
+                        <option value="2">Projects</option>
+                        <option value="3">Community</option>
+                        <option value="4">Open Source</option>
+                    </select>
+                </div>
 
-            <div class="itens-group">
-                <p>What would you like to see improved?
-                    <span class="check-all">(Check all that apply)</span>
-                </p>
-                <label for="">
-                    <input type="checkbox" name="prefer" id="front-end-project" value="1">
-                    Front-end Projects
-                    <br>
-                </label>
-                <label for="">
-                    <input type="checkbox" name="prefer" id="back-end-project" value="2">
-                    Back-end Projects
-                    <br>
-                </label>
-                <label for="">
-                    <input type="checkbox" name="prefer" id="data-visualization" value="3">
-                    Data Visualization
-                    <br>
-                </label>
-                <label for="">
-                    <input type="checkbox" name="prefer" id="Challenges" value="4">
-                    Challenges
-                    <br>
-                </label>
-                <label for="">
-                    <input type="checkbox" name="prefer" id="open-source-community" value="5">
-                    Open Source Community
-                    <br>
-                </label>
-                <label for="">
-                    <input type="checkbox" name="prefer" id="gitter-help-rooms" value="6">
-                    Gitter help rooms
-                    <br>
-                </label>
-                <label for="">
-                    <input type="checkbox" name="prefer" id="videos" value="7">
-                    Videos
-                    <br>
-                </label>
-                <label for="">
-                    <input type="checkbox" name="prefer" id="city-meetups" value="8">
-                    City Meetups
-                    <br>
-                </label>
-                <label for="">
-                    <input type="checkbox" name="prefer" id="wiki" value="9">
-                    Wiki
-                    <br>
-                </label>
-                <label for="">
-                    <input type="checkbox" name="prefer" id="forum" value="10">
-                    Forum
-                    <br>
-                </label>
-                <label for="">
-                    <input type="checkbox" name="prefer" id="aditional-courses" value="11">
-                    Adicional Courses
-                    <br>
-                </label>
-            </div>
+                <div class="itens-group">
+                    <p>What would you like to see improved?
+                        <span class="check-all">(Check all that apply)</span>
+                    </p>
+                    <label class="label-checkbox">
+                        <input type="checkbox" name="prefer" id="front-end-project" value="1">
+                        Front-end Projects
+                        <br>
+                    </label>
+                    <label class="label-checkbox">
+                        <input type="checkbox" name="prefer" id="back-end-project" value="2">
+                        Back-end Projects
+                        <br>
+                    </label>
+                    <label class="label-checkbox">
+                        <input type="checkbox" name="prefer" id="data-visualization" value="3">
+                        Data Visualization
+                        <br>
+                    </label>
+                    <label class="label-checkbox">
+                        <input type="checkbox" name="prefer" id="Challenges" value="4">
+                        Challenges
+                        <br>
+                    </label>
+                    <label class="label-checkbox">
+                        <input type="checkbox" name="prefer" id="open-source-community" value="5">
+                        Open Source Community
+                        <br>
+                    </label>
+                    <label class="label-checkbox">
+                        <input type="checkbox" name="prefer" id="gitter-help-rooms" value="6">
+                        Gitter help rooms
+                        <br>
+                    </label>
+                    <label class="label-checkbox">
+                        <input type="checkbox" name="prefer" id="videos" value="7">
+                        Videos
+                        <br>
+                    </label>
+                    <label class="label-checkbox">
+                        <input type="checkbox" name="prefer" id="city-meetups" value="8">
+                        City Meetups
+                        <br>
+                    </label>
+                    <label class="label-checkbox">
+                        <input type="checkbox" name="prefer" id="wiki" value="9">
+                        Wiki
+                        <br>
+                    </label>
+                    <label class="label-checkbox">
+                        <input type="checkbox" name="prefer" id="forum" value="10">
+                        Forum
+                        <br>
+                    </label>
+                    <label class="label-checkbox">
+                        <input type="checkbox" name="prefer" id="aditional-courses" value="11">
+                        Adicional Courses
+                        <br>
+                    </label>
+                </div>
 
-            <div class="itens-group">
-                <p>Any comments or suggestions?</p>
-                <textarea id="suggestions" placeholder="Enter your comment here..."></textarea>
-            </div>
+                <div class="itens-group">
+                    <p>Any comments or suggestions?</p>
+                    <textarea id="suggestions" placeholder="Enter your comment here..." rows="7"></textarea>
+                </div>
 
-            <div class="itens-group" id="last-itens-group">
-                <input type="submit" id="submit" value="Submit">
-            </div>
-        </form>
-    </main>
+                <div class="itens-group" id="last-itens-group">
+                    <input type="submit" id="submit" value="Submit">
+                </div>
+            </form>
+        </main>
+    </div>
+
+
 </body>
 
 </html>
